@@ -1,0 +1,52 @@
+body {
+    background-color: #fdfd99;
+}
+table {
+    width: 50%;
+}
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+th {
+    width: 25%;
+}
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+table:first-child {
+    height: auto;
+}
+#tops {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+}
+hr {
+    background-color: black;
+    color: black;
+    height: 2px;
+    border-color: black;
+}
+button {
+    background-color: #fafa99;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+div.centered {
+    text-align: center;
+}
+#opened {
+    visibility: hidden;
+    text-align: center;
+}
+.ui-widget-content {
+    border: 2px solid #DDD;
+}
+.pay {
+    border: 1px black dashed;
+
+}
