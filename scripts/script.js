@@ -52,6 +52,7 @@ $(document).ready(function () {
         $('#totalprice').text('0');
     }
     else{
+        sum = Math.round(sum * 100) / 100;
         $('#totalprice').text(String(sum));
     }
 });

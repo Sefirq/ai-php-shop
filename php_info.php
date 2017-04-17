@@ -22,13 +22,23 @@ session_start();
     <script src="/scripts/script.js"></script>
     <link rel="stylesheet" href="/styles/style.css?ts=<?=time()?>&quot; />" type="text/css"/>
 </head>
-<body>
+<body background="https://s-media-cache-ak0.pinimg.com/736x/9f/4c/05/9f4c05a2ff8f02a72bdb55c9417dbb6e.jpg">
 <h1 id="tops">Best shop</h1>
     <?php
     if (isset($_GET['error'])) {
         if($_GET['error'] == 1) {
             echo '<script type="text/javascript">alert("Too many items chosen")</script>';
             unset($_GET['error']);
+        }
+        if($_GET['error'] == 2) {
+            echo '<script type="text/javascript">alert("You couldn\'t buy the items")</script>';
+            unset($_GET['error']);
+        }
+    }
+    if (isset($_GET['success'])) {
+        if($_GET['success'] == 2) {
+            echo '<script type="text/javascript">alert("You bought all the items!")</script>';
+            unset($_GET['success']);
         }
     }
     $link = mysqli_connect("localhost", "root", "", "Products");
@@ -78,11 +88,17 @@ printf("</table>");
 <div class="centered">
     <p>You will have to pay: <span id="totalprice"></span>zł. </p>
 </div>
-
+<form name="myLetters" action="/buyall.php" method="POST">
+    <div class="centered">
+        <?php
+        printf("<button type='submit' name='action' value='clear'>Clear the basket</button>")
+        ?>
+    </div>
+</form>
 <form name="myLetters" action="/buyall.php" method="POST">
     <div class="centered">
 <?php
-printf("<button type='submit' name='action' value='call_this'>Buy all items from basket</button>")
+printf("<button type='submit' name='action' value='buy'>Buy all items from basket</button>")
 ?>
     </div>
 </form>
