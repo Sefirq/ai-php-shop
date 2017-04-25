@@ -1,5 +1,10 @@
+* {
+    font-family: sans-serif;
+}
 body {
-    background-color: #fdfd99;
+    background-color: #ff9de2;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 table {
     width: 50%;
@@ -19,8 +24,17 @@ table.center {
 table:first-child {
     height: auto;
 }
+tr:nth-child(even){
+    background-color: #8C82FC;
+}
+tr:nth-child(odd){
+    background-color: #B693FE;
+}
 #tops {
     text-align: center;
+}
+tr * {
+    color: white;
 }
 h4 {
     text-align: center;
@@ -32,7 +46,7 @@ hr {
     border-color: black;
 }
 button {
-    background-color: #fafa99;
+    background-color: #7EFFDB;
     margin-top: 10px;
     margin-left: 20px;
 }
@@ -45,8 +59,8 @@ div.centered {
 }
 .ui-widget-content {
     border: 2px solid #DDD;
+    background-color: #FF9DE2;
 }
 .pay {
     border: 1px black dashed;
-
 }
